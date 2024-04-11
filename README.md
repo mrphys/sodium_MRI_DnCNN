@@ -9,6 +9,7 @@ A modified denoising convolutional neural network \[1\] is trained using 1H DICO
 
 Example
 -------
+https://github.com/mrphys/sodium_MRI_DnCNN/blob/570a78e0fbfc7492dc2b7007ece50926604e2959/Pretrained_test_image_30NSA.png
 
 Installation and use
 ====================
