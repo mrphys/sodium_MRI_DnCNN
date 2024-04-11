@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  tensorflow:
+    build:
+      context: ./.devcontainer
+    image: ${USER}/sodium_mri_dncnn
+
+    volumes:
+      - type: bind
+        source: .
+        target: /workspaces/sodium_mri_dncnn
+    working_dir: /workspaces/sodium_mri_dncnn
+    stdin_open: true 
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+    environment:
+      - CUDA_VISIBLE_DEVICES
